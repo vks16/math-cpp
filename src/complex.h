@@ -8,11 +8,19 @@ struct Complex{
 
     Complex(float, float);
  
-
+    // arithmetic operatiors
     Complex operator+(const Complex& other);
     Complex operator-(const Complex& other);
     Complex operator*(const Complex& other);
     Complex operator/(const Complex& other);
+
+    // comparision operatiors
+    bool operator==(const Complex& other);
+    bool operator!=(const Complex& other);
+    bool operator<(const Complex& other);
+    bool operator>(const Complex& other);
+    bool operator<=(const Complex& other);
+    bool operator>=(const Complex& other);
 };
 
 std::ostream& operator<<(std::ostream& stream, const Complex& c);

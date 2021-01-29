@@ -27,6 +27,63 @@ Complex Complex::operator/(const Complex& other) {
     return div;
 }
 
+bool Complex::operator==(const Complex& other)
+{
+    if(real == other.real && img == other.img)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool Complex::operator!=(const Complex& other)
+{
+    if(real != other.real && img != other.img)
+    {
+        return true;
+    }
+    return false;
+}
+
+bool Complex::operator<(const Complex& other)
+{
+    if(real < other.real){
+        return true;
+    }else if( real == other.real && img < other.img){
+        return true;
+    }
+
+    return false;
+}
+
+bool Complex::operator>(const Complex& other)
+{
+    if(real > other.real){
+        return true;
+    }else if( real == other.real && img > other.img){
+        return true;
+    }
+
+    return false;
+}
+
+bool Complex::operator<=(const Complex& other)
+{
+    if((*this == other) || (*this < other)){
+        return true;
+    }
+
+    return false;
+}
+
+bool Complex::operator>=(const Complex& other)
+{
+    if((*this == other) || (*this > other)){
+        return true;
+    }
+
+    return false;
+}
 
 std::ostream& operator<<(std::ostream& stream, const Complex& c){
 
