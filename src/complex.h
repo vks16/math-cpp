@@ -10,6 +10,9 @@ struct Complex{
  
 
     Complex operator+(const Complex& other);
+    Complex operator-(const Complex& other);
+    Complex operator*(const Complex& other);
+    Complex operator/(const Complex& other);
 };
 
 std::ostream& operator<<(std::ostream& stream, const Complex& c);
